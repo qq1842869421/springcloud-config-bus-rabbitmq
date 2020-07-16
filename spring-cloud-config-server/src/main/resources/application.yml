@@ -1,0 +1,26 @@
+server:
+  port: 7777
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/qiaojianlong_admin/config.git
+          username: q1842869421@163.com
+          password: ycy520..
+          #search-paths: /config
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
